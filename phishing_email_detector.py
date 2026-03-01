@@ -20,9 +20,15 @@ print("\nSECURITY ASSESSMENT:")
 
 check = subject.lower()
 
-if "urgent" in check or "bank transfer" in check:
+if ("urgent" in check or 
+    "bank transfer" in check or 
+    "immediate action required" in check or 
+    "immediate action" in check):
     print("HIGH RISK: Possible phishing attempt.")
-elif "win" in check or "offer" in check:
+elif ("win" in check or 
+      "offer" in check or 
+      "free" in check or 
+      "prize" in check):
     print("MEDIUM RISK: Suspicious offer detected.")
 elif "password reset" in check:
     print("LOW RISK: Verify legitimacy with sender.")
@@ -31,7 +37,6 @@ else:
 
 print("------------------------")
 print(f'Analyzed subject: "{subject}"')
-
 
 
 
